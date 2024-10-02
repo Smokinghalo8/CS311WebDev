@@ -1,8 +1,16 @@
 let totallyRealVariable = document.getElementById("variabled")
 let tempInteger = 0;
 
+
+
+
 var TempStringVar1= document.getElementById("tempTextPlace");
 TempStringVar1.style.display="none";
+
+
+
+
+
 
 function changeTextTemp() {
 	if(tempInteger==0){
