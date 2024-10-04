@@ -103,8 +103,6 @@ seniorRitImage.setAttribute("alt", "Senior Ritual Badge")
 
 const profiles = document.getElementsByClassName("roster-profile")
 
-console.log("profiles")
-console.log(profiles)
 
 for(let i=0; i<=profiles.length;i++){
   var x = 0
@@ -115,58 +113,87 @@ for(let i=0; i<=profiles.length;i++){
 
   const imageContainer = profiles[i].querySelector("#image_placeholder")//This used to be above
 
-  console.log(profileClassList)
-  console.log("space")
 
   /*For multiple classes, maybe switch the if statment or on the outside create a checking system that will compare the amount of 
   added images to how many classes the object has, and will keep running until the two numbers are the same?  */
   while(x < profileArrayClasses.length){
     x+=1
-    console.log("through while statement")
   if (profileArrayClasses.includes("roster-profile-beta")){/*check to see if the div already has the image, if so skip */
 
     const tempindex = profileArrayClasses.indexOf("roster-profile-beta")
-    console.log(tempindex)
     imageContainer.appendChild(highBetaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
-    console.log(profileArrayClasses)
     profileArrayClasses.slice(tempindex,1)
     delete(profileArrayClasses[tempindex])
-    console.log(profileArrayClasses)
     
-  } else if(profileClassList.includes("roster-profile-sweetheart")){ /*Main issue with this code now, is that there needs to be multiple image_placeholder(s) on screen */
-    console.log("This is the sweetheart")
-    imageContainer.innerHTML = "sweet"
-  } else if (profileClassList.includes("roster-profile-theta")){
-    imageContainer.appendChild(highThetaImage)
-  } else if (profileClassList.includes("roster-profile-gamma")){
-    imageContainer.appendChild(highGammaImage)
-  } else if (profileClassList.includes("roster-profile-tau")){
-    imageContainer.appendChild(highTauImage)
-  } else if (profileClassList.includes("roster-profile-iota")){
-    imageContainer.appendChild(highIotaImage)
-  } else if (profileClassList.includes("roster-profile-rho")){
-    imageContainer.appendChild(highRhoImage)
-  } else if (profileClassList.includes("roster-profile-kappa")){
-    imageContainer.appendChild(highKappaImage)
-  } else if (profileClassList.includes("roster-profile-delta")){
-    imageContainer.appendChild(highDeltaImage)
-  } else if (profileClassList.includes("roster-profile-phi")){
-    imageContainer.appendChild(highPhiImage)
-  } else if (profileClassList.includes("roster-profile-sigma")){
-    imageContainer.appendChild(highSigmaImage)
-  } else if (profileClassList.includes("roster-profile-epsilon")){
-    imageContainer.appendChild(highEpsilonImage)
-  } else if (profileClassList.includes("roster-profile-pi")){
-    imageContainer.appendChild(highPiImage)
-  } else if (profileClassList.includes("roster-profile-ifc")){
+  } else if(profileArrayClasses.includes("roster-profile-sweetheart")){ /*Main issue with this code now, is that there needs to be multiple image_placeholder(s) on screen */
+    console.log("Sweetheart :)")
+  } else if (profileArrayClasses.includes("roster-profile-theta")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-theta")
+    imageContainer.appendChild(highThetaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-gamma")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-gamma")
+    imageContainer.appendChild(highGammaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-tau")){
+      const tempindex = profileArrayClasses.indexOf("roster-profile-tau")
+      imageContainer.appendChild(highTauImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+      profileArrayClasses.slice(tempindex,1)
+      delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-iota")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-iota")
+    imageContainer.appendChild(highIotaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  }  else if (profileArrayClasses.includes("roster-profile-rho")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-rho")
+    imageContainer.appendChild(highRhoImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-kappa")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-kappa")
+    imageContainer.appendChild(highKappaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-delta")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-delta")
+    imageContainer.appendChild(highDeltaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-phi")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-phi")
+    imageContainer.appendChild(highPhiImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-sigma")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-sigma")
+    imageContainer.appendChild(highSigmaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-epsilon")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-epsilon")
+    imageContainer.appendChild(highEpsilonImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-pi")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-pi")
+    imageContainer.appendChild(highPiImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-ifc")){
     console.log("No image needed?")
-  } else if (profileClassList.includes("roster-profile-alumni-advisors")){
+  } else if (profileArrayClasses.includes("roster-profile-alumni-advisors")){
     console.log("No image needed?")
-  } else if (profileClassList.includes("roster-profile-alpha")){
-    imageContainer.appendChild(highAlphaImage)
-  } else if (profileClassList.includes("roster-profile-alumni")){
+  } else if (profileArrayClasses.includes("roster-profile-alpha")){
+    const tempindex = profileArrayClasses.indexOf("roster-profile-alpha")
+    imageContainer.appendChild(highAlphaImage)//Changing this so itll check profileArrayClasses for the tag, and then maybe pop it from the stack
+    profileArrayClasses.slice(tempindex,1)
+    delete(profileArrayClasses[tempindex])
+  } else if (profileArrayClasses.includes("roster-profile-alumni")){
     console.log("Alumni Badge needed")
-  } else if (profileClassList.includes("roster-profile-brother")){
+  } else if (profileArrayClasses.includes("roster-profile-brother")){
     console.log("Brother Badge needed")
   } else {
     console.log("Error 1 - Error in Javascript appending images OR no image")
